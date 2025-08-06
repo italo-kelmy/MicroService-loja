@@ -14,15 +14,15 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotNull(message = "Usuário é Obrigátorio")
+    @NotNull(message = "Usuário é Obrigatório")
     private String usuario;
-    @NotNull(message = "Senha é Obrigátorio")
+    @NotNull(message = "Senha é Obrigatório")
     @Size(min = 8, message = "A senha precisa ter no mínimo oito caracteres e não pode começar nem terminar com um espaço")
     private String senha;
-    @NotNull(message = "Email é Obrigátorio")
+    @NotNull(message = "Email é Obrigatório")
     @Email(message = "Formato válido: exemploemail@hotmail.com")
     private String email;
-    @NotNull(message = "Cep é Obrigátorio")
+    @NotNull(message = "Cep é Obrigatório")
     @Pattern(regexp = "^\\d{5}-\\d{3}$", message = "Formato válido: xxxxx-xxx")
     private String cep;
 
